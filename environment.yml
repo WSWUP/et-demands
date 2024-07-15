@@ -1,0 +1,20 @@
+name: etdemands
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh>=0.13.0
+  - gdal>=2.2.4
+  - geopandas>=0.4.0
+  - numpy>=1.15.0
+  - openpyxl=2.5.5
+  - pandas>=0.23.5
+  - pyshp=1.2.12
+  - pytest=3.8.0
+  - python=3.6.6
+  - rtree
+  - shapely
+  - xlrd>=1.1.0
+  - requests
+  - refet>=0.3.10
+  - tk

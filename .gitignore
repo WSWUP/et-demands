@@ -1,0 +1,92 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+.eggs/
+*.egg-info/
+
+# Unit test / coverage reports
+.cache
+.coverage
+
+# Shapefiles
+*.lock
+*.cpg
+
+# Temporary microsoft files
+~$*
+
+# PyCharm
+.idea
+venv
+
+# Miscellaneous files
+*.bak
+
+# Common Data
+common
+
+# Example folders/files
+example/calibration
+example/gis/ETCells*
+example/gis/cdl
+example/gis/scratch
+example/gis/soils/*
+example/gis/zone_tables
+example/static
+example/annual_stats
+example/daily_stats
+example/monthly_stats
+example/growing_season_stats
+
+examples/common
+examples/gridmet/gis/cdl
+examples/gridmet/gis/scratch
+examples/gridmet/gis/soils
+examples/huc8/gis/cdl
+examples/huc8/gis/scratch
+examples/huc8/gis/soils
+examples/huc8/gis/cdl_crops*
+examples/huc8/static
+examples/huc8/daily_stats
+examples/huc8/monthly_stats
+examples/huc8/annual_stats
+examples/huc8/growing_season_stats
+examples/huc8/summary_shapefiles
+examples/huc8/cropweighted_shapefiles
+examples/huc8/debug.txt
+examples/huc8/hist_temps
+examples/common
+examples/gridmet/gis/cdl
+examples/gridmet/gis/scratch
+examples/gridmet/gis/soils
+examples/gridmet/gis/cdl
+examples/gridmet/gis/scratch
+examples/gridmet/gis/soils
+examples/gridmet/gis/cdl_crops*
+examples/gridmet/static
+examples/gridmet/daily_stats
+examples/gridmet/monthly_stats
+examples/gridmet/annual_stats
+examples/gridmet/growing_season_stats
+examples/gridmet/summary_shapefiles
+examples/gridmet/cropweighted_shapefiles
+examples/gridmet/debug.txt
+examples/gridmet/gis/development
+examples/gridmet/climate/gridmet_hist*
+
+
+et-demands/tools/__init__.py
+et-demands/tools/legacy_scripts/__init__.py
+et-demands/__init__.py
+examples/gridmet/gis/uppercarson_agcells.dbf
+examples/huc8/gis/WBDHU8_32612.dbf
+examples/gridmet/gis/uppercarson_agcells.dbf
+examples/huc8/gis/WBDHU8_32612.dbf
+et-demands/refET/bin/Untitled.ipynb
+et-demands/refET/bin/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+et-demands/refET/bin/TmaxMon.csv
+examples/huc8/gis/WBDHU8_32612.dbf

@@ -1,0 +1,13 @@
+"Nevada final station file with many sites taken out (as of_Jan 2, 2008).  This file contains first (temporary) numbers of_cutting cycles for dairy and beef hay, based on latitude.  R.Allen 4/1/08"
+ET Cell Name	ET Cell ID	Lat	Number Dairy	Number Beef	null	null
+ET_of_Upper_North_Fork_Red_TX	11120301TX	35.2361	3	3	0	0
+ET_of_Upper_Salt Fork_Red_TX	11120201TX	34.9325	3	3	0	0
+ET_of_Middle_North Fork_Red_TX	11120302TX	35.2164	3	3	0	0
+ET_of_Elm Fork_Red_TX	11120304TX	35.2361	3	3	0	0
+ET_of_Groesbeck-Sandy_OK	11130101TX	34.6808	4	4	0	0
+ET_of_Lower_Salt_Fork_Red_TX	11120202TX	34.8422	3	3	0	0
+ET_of_Groesbeck-Sandy_OK	11130101OK	34.6808	4	4	0	0
+ET_of_Lower_Salt_Fork_Red_OK	11120202OK	34.5903	4	4	0	0
+ET_of_Elm_Fork_Red_OK	11120304OK	34.8911	4	4	0	0
+ET_of_Lower_North_Fork_Red_OK	11120303OK	34.4397	4	4	0	0
+ET_of_Middle_North_Fork_Red_OK	11120302OK	35.2164	4	4	0	0

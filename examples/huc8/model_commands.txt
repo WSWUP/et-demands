@@ -1,0 +1,49 @@
+# ------------------------------------------------------------------------------
+# ET Demands Model HUC8 Example Commands
+# Run from: et-demands\examples\huc8
+# ------------------------------------------------------------------------------
+# Run Prep
+
+## Prep Commands
+# Scripts A1-A3 are only needed if user does not have a crop shapefile
+# The CDL clip script is only needed if storage space is an issue
+
+#-A1 Download CDL Raster
+python ..\..\et-demands\prep\download_cdl_raster.py --ini huc_example_prep.ini
+
+#-A2 Clip CDL Raster
+python ..\..\et-demands\prep\clip_cdl_raster.py --ini huc_example_prep.ini
+
+#-A3 Build CDL Shapefile
+python ..\..\et-demands\prep\build_ag_cdl_shapefile.py --ini huc_example_prep.ini
+
+#-1 Download Soils Files
+python ..\..\et-demands\prep\download_statsgo_shapefiles.py --ini huc_example_prep.ini
+
+#-2 Calculate Zonal Statistics
+python ..\..\et-demands\prep\et_demands_zonal_stats.py --ini huc_example_prep.ini
+
+#-3 Build Static Files
+python ..\..\et-demands\prep\build_static_files.py --ini huc_example_prep.ini
+
+# ------------------------------------------------------------------------------
+# Run Model
+
+#-4 Run CET
+python ../../et-demands/cropET/bin/run_cet.py -i huc_example_cet.ini -b ../../et-demands/cropET/bin/
+
+#-4b Run CET with debug and verbose options on
+python ../../et-demands/cropET/bin/run_cet.py -i huc_example_cet.ini -b ../../et-demands/cropET/bin/ -v -d
+
+# ------------------------------------------------------------------------------
+# Run Post-Processing
+
+#-5
+python ..\..\et-demands\tools\cropweighted_shapefiles_gpd.py -i huc_example.ini -y 2017 -t annual
+
+#-6
+python ..\..\et-demands\tools\summary_shapefiles_gpd.py -i huc_example.ini -y 2017 -t annual
+
+# ------------------------------------------------------------------------------
+# Project ET zones .shp if needed (https://www.nceas.ucsb.edu/scicomp/recipes/gdal-reproject)
+ogr2ogr -t_srs EPSG:32612 D:\et-demands\examples\huc8\gis\WBDHU8_32612.shp D:\et-demands\examples\huc8\gis\WBDHU8.shp

@@ -1,0 +1,12 @@
+1) ModuleNotFoundError: No module named 'osgeo'
+  GDAL is not installed. This can be fixed by ensuring all dependencies are installed
+  See the install instructions for using the environment.yml file or installing
+  dependencies manually. Also ensure that if you're using an etdemands or project
+  specific environment that it is active
+    conda activate etdemands <project_env>
+
+
+et_cell.py
+    field_name, os.path.basename(temps_path), field_key))
+sys.exit()
+-> temps_path not used anymore -> remove or change

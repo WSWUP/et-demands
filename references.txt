@@ -1,0 +1,16 @@
+Allen and Tasumi (2005) - aerodynamic open water evaporation (open_water_evap.py)
+Borg and Grimes (1986) - sigmoidal function root growth (grow_root.py)
+	doi: 10.13031/2013.30125
+SCS refs for curve number runoff - runoff.py
+
+
+
+# OPTIONAL SECTION ...
+[HIST]
+# Phenology Option
+# 0 - No phenology option
+# 1 - annual crops only
+# 2 - perennial crops only
+# 3 - annual and perennial crops
+phenology_option = 0
+hist_temps_folder

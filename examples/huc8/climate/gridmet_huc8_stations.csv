@@ -1,0 +1,7 @@
+LAT,LON,GRIDMET_ID,ELEV_M,ELEV_FT,FIPS_C,STPO,COUNTYNAME,CNTYCATEGO,STATENAME,HUC8,STATION_ID,GRIDMET_FILE_PATH
+38.4,-107.8083333,443927,1875.6,6153.54,8085,CO,Montrose,County,Colorado,14020006,0,D:\et-demands\examples\huc8\climate\gridmet_historical_443927.csv
+38.4,-107.474999967,443935,2387.2,7832.02,8051,CO,Gunnison,County,Colorado,14020002,1,D:\et-demands\examples\huc8\climate\gridmet_historical_443935.csv
+38.4416666667,-106.599999967,445342,2476.84,8126.12,8051,CO,Gunnison,County,Colorado,14020003,2,D:\et-demands\examples\huc8\climate\gridmet_historical_445342.csv
+38.7333333333,-108.099999967,455008,1533.72,5031.89,8029,CO,Delta,County,Colorado,14020005,3,D:\et-demands\examples\huc8\climate\gridmet_historical_455008.csv
+38.7333333333,-106.849999967,455038,2566.28,8419.55,8051,CO,Gunnison,County,Colorado,14020001,4,D:\et-demands\examples\huc8\climate\gridmet_historical_455038.csv
+38.8583333333,-107.599999967,459178,1751.52,5746.46,8029,CO,Delta,County,Colorado,14020004,5,D:\et-demands\examples\huc8\climate\gridmet_historical_459178.csv

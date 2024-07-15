@@ -1,0 +1,8 @@
+# RUN COMMANDS
+# (RUN FROM runScripts DIRECTORY)
+
+# REFET
+python ..\et-demands\refET\bin\run_ret.py -i ret.ini
+
+ #CROPET
+python run_cet.py -i cet_example.ini

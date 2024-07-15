@@ -1,0 +1,71 @@
+FID,LAT,LON,GRIDMET_ID,ELEV_M,ELEV_FT,FIPS_C,STPO,COUNTYNAME,CNTYCATEGO,STATENAME,HUC8,STATION_ID,GRIDMET_FILE_PATH
+0,38.5666666667,-119.64166663299999,449187,2207.3999023,7242.129882800001,6003,CA,Alpine,County,California,16050201,449187,D:\et-demands\examples\gridmet\climate\gridmet_historical_449187.csv
+1,38.65,-119.724999967,451957,1985.9200438999999,6515.490234399999,6003,CA,Alpine,County,California,16050201,451957,D:\et-demands\examples\gridmet\climate\gridmet_historical_451957.csv
+2,38.6916666667,-119.64166663299999,453345,2342.2800293,7684.649902300001,6003,CA,Alpine,County,California,16050201,453345,D:\et-demands\examples\gridmet\climate\gridmet_historical_453345.csv
+3,38.7333333333,-119.8083333,454727,1934.6400145999999,6347.240234399999,6003,CA,Alpine,County,California,16050201,454727,D:\et-demands\examples\gridmet\climate\gridmet_historical_454727.csv
+4,38.775,-119.849999967,456112,2304.1599121,7559.580078100001,6003,CA,Alpine,County,California,16050201,456112,D:\et-demands\examples\gridmet\climate\gridmet_historical_456112.csv
+5,38.775,-119.8083333,456113,1818.6400145999999,5966.669921899999,6003,CA,Alpine,County,California,16050201,456113,D:\et-demands\examples\gridmet\climate\gridmet_historical_456113.csv
+6,38.775,-119.724999967,456115,1727.4399414000002,5667.4501953,6003,CA,Alpine,County,California,16050201,456115,D:\et-demands\examples\gridmet\climate\gridmet_historical_456115.csv
+7,38.775,-119.6833333,456116,1741.5200195,5713.649902300001,6003,CA,Alpine,County,California,16050201,456116,D:\et-demands\examples\gridmet\climate\gridmet_historical_456116.csv
+8,38.775,-119.5583333,456119,2034.1600342,6673.75,32005,NV,Douglas,County,Nevada,16050302,456119,D:\et-demands\examples\gridmet\climate\gridmet_historical_456119.csv
+9,38.775,-119.51666663299999,456120,2057.0,6748.689941399999,32005,NV,Douglas,County,Nevada,16050302,456120,D:\et-demands\examples\gridmet\climate\gridmet_historical_456120.csv
+10,38.8166666667,-119.8083333,457499,2054.1599121,6739.370117199999,6003,CA,Alpine,County,California,16050201,457499,D:\et-demands\examples\gridmet\climate\gridmet_historical_457499.csv
+11,38.8166666667,-119.76666663299999,457500,1561.1600342,5121.919921899999,6003,CA,Alpine,County,California,16050201,457500,D:\et-demands\examples\gridmet\climate\gridmet_historical_457500.csv
+12,38.8166666667,-119.724999967,457501,1624.4399414000002,5329.529785199999,32005,NV,Douglas,County,Nevada,16050201,457501,D:\et-demands\examples\gridmet\climate\gridmet_historical_457501.csv
+13,38.8166666667,-119.6833333,457502,1690.2800292999998,5545.5400391,32005,NV,Douglas,County,Nevada,16050201,457502,D:\et-demands\examples\gridmet\climate\gridmet_historical_457502.csv
+14,38.8166666667,-119.51666663299999,457506,2577.0400391,8454.8603516,32005,NV,Douglas,County,Nevada,16050201,457506,D:\et-demands\examples\gridmet\climate\gridmet_historical_457506.csv
+15,38.8583333333,-119.849999967,458884,2689.0800781,8822.4404297,6003,CA,Alpine,County,California,16050201,458884,D:\et-demands\examples\gridmet\climate\gridmet_historical_458884.csv
+16,38.8583333333,-119.8083333,458885,1742.5999755999997,5717.1899414,6003,CA,Alpine,County,California,16050201,458885,D:\et-demands\examples\gridmet\climate\gridmet_historical_458885.csv
+17,38.8583333333,-119.76666663299999,458886,1471.4799805,4827.6899414,32005,NV,Douglas,County,Nevada,16050201,458886,D:\et-demands\examples\gridmet\climate\gridmet_historical_458886.csv
+18,38.8583333333,-119.724999967,458887,1541.1600342,5056.2998047,32005,NV,Douglas,County,Nevada,16050201,458887,D:\et-demands\examples\gridmet\climate\gridmet_historical_458887.csv
+19,38.8583333333,-119.51666663299999,458892,2382.9599609,7818.1098633,32005,NV,Douglas,County,Nevada,16050201,458892,D:\et-demands\examples\gridmet\climate\gridmet_historical_458892.csv
+20,38.8583333333,-119.474999967,458893,2433.3200684,7983.330078100001,32005,NV,Douglas,County,Nevada,16050302,458893,D:\et-demands\examples\gridmet\climate\gridmet_historical_458893.csv
+21,38.9,-119.89166663299999,460269,2601.9199219,8536.4804688,6017,CA,El Dorado,County,California,16050101,460269,D:\et-demands\examples\gridmet\climate\gridmet_historical_460269.csv
+22,38.9,-119.849999967,460270,2046.0,6712.600097699999,32005,NV,Douglas,County,Nevada,16050201,460270,D:\et-demands\examples\gridmet\climate\gridmet_historical_460270.csv
+23,38.9,-119.8083333,460271,1467.7600098,4815.490234399999,32005,NV,Douglas,County,Nevada,16050201,460271,D:\et-demands\examples\gridmet\climate\gridmet_historical_460271.csv
+24,38.9,-119.76666663299999,460272,1446.7600098,4746.5898438,32005,NV,Douglas,County,Nevada,16050201,460272,D:\et-demands\examples\gridmet\climate\gridmet_historical_460272.csv
+25,38.9,-119.724999967,460273,1477.7600098,4848.2900391,32005,NV,Douglas,County,Nevada,16050201,460273,D:\et-demands\examples\gridmet\climate\gridmet_historical_460273.csv
+26,38.9,-119.6833333,460274,1512.4000244000001,4961.9399414,32005,NV,Douglas,County,Nevada,16050201,460274,D:\et-demands\examples\gridmet\climate\gridmet_historical_460274.csv
+27,38.9,-119.51666663299999,460278,2217.7600098000003,7276.120117199999,32005,NV,Douglas,County,Nevada,16050201,460278,D:\et-demands\examples\gridmet\climate\gridmet_historical_460278.csv
+28,38.9,-119.474999967,460279,2360.0400391,7742.910156300001,32005,NV,Douglas,County,Nevada,16050302,460279,D:\et-demands\examples\gridmet\climate\gridmet_historical_460279.csv
+29,38.9416666667,-119.89166663299999,461655,2567.4799805,8423.4902344,32005,NV,Douglas,County,Nevada,16050201,461655,D:\et-demands\examples\gridmet\climate\gridmet_historical_461655.csv
+30,38.9416666667,-119.849999967,461656,1836.2399902,6024.4101563,32005,NV,Douglas,County,Nevada,16050201,461656,D:\et-demands\examples\gridmet\climate\gridmet_historical_461656.csv
+31,38.9416666667,-119.8083333,461657,1433.6800537000001,4703.669921899999,32005,NV,Douglas,County,Nevada,16050201,461657,D:\et-demands\examples\gridmet\climate\gridmet_historical_461657.csv
+32,38.9416666667,-119.76666663299999,461658,1439.3599854000001,4722.3100586,32005,NV,Douglas,County,Nevada,16050201,461658,D:\et-demands\examples\gridmet\climate\gridmet_historical_461658.csv
+33,38.9416666667,-119.724999967,461659,1457.6800537000001,4782.419921899999,32005,NV,Douglas,County,Nevada,16050201,461659,D:\et-demands\examples\gridmet\climate\gridmet_historical_461659.csv
+34,38.9416666667,-119.6833333,461660,1513.7199707,4966.2700195,32005,NV,Douglas,County,Nevada,16050201,461660,D:\et-demands\examples\gridmet\climate\gridmet_historical_461660.csv
+35,38.9416666667,-119.64166663299999,461661,1576.1999512,5171.259765600001,32005,NV,Douglas,County,Nevada,16050201,461661,D:\et-demands\examples\gridmet\climate\gridmet_historical_461661.csv
+36,38.9416666667,-119.5583333,461663,1824.8000487999998,5986.8798828,32005,NV,Douglas,County,Nevada,16050201,461663,D:\et-demands\examples\gridmet\climate\gridmet_historical_461663.csv
+37,38.9833333333,-119.849999967,463042,1878.5600585999998,6163.25,32005,NV,Douglas,County,Nevada,16050201,463042,D:\et-demands\examples\gridmet\climate\gridmet_historical_463042.csv
+38,38.9833333333,-119.8083333,463043,1427.4399414000002,4683.2001953,32005,NV,Douglas,County,Nevada,16050201,463043,D:\et-demands\examples\gridmet\climate\gridmet_historical_463043.csv
+39,38.9833333333,-119.76666663299999,463044,1432.4000244000001,4699.4799805,32005,NV,Douglas,County,Nevada,16050201,463044,D:\et-demands\examples\gridmet\climate\gridmet_historical_463044.csv
+40,38.9833333333,-119.724999967,463045,1453.0799561,4767.3198242,32005,NV,Douglas,County,Nevada,16050201,463045,D:\et-demands\examples\gridmet\climate\gridmet_historical_463045.csv
+41,38.9833333333,-119.64166663299999,463047,1580.3599854000001,5184.9101563,32005,NV,Douglas,County,Nevada,16050201,463047,D:\et-demands\examples\gridmet\climate\gridmet_historical_463047.csv
+42,38.9833333333,-119.474999967,463051,2235.1201171999996,7333.0698242,32005,NV,Douglas,County,Nevada,16050201,463051,D:\et-demands\examples\gridmet\climate\gridmet_historical_463051.csv
+43,39.025,-119.849999967,464428,2009.3199462999999,6592.259765600001,32005,NV,Douglas,County,Nevada,16050201,464428,D:\et-demands\examples\gridmet\climate\gridmet_historical_464428.csv
+44,39.025,-119.8083333,464429,1433.0,4701.4399414,32005,NV,Douglas,County,Nevada,16050201,464429,D:\et-demands\examples\gridmet\climate\gridmet_historical_464429.csv
+45,39.025,-119.76666663299999,464430,1424.5999755999999,4673.8798828,32005,NV,Douglas,County,Nevada,16050201,464430,D:\et-demands\examples\gridmet\climate\gridmet_historical_464430.csv
+46,39.025,-119.724999967,464431,1450.4399414000002,4758.6601563,32005,NV,Douglas,County,Nevada,16050201,464431,D:\et-demands\examples\gridmet\climate\gridmet_historical_464431.csv
+47,39.0666666667,-119.849999967,465814,2029.8000487999998,6659.4501953,32005,NV,Douglas,County,Nevada,16050201,465814,D:\et-demands\examples\gridmet\climate\gridmet_historical_465814.csv
+48,39.0666666667,-119.8083333,465815,1528.7199707,5015.490234399999,32005,NV,Douglas,County,Nevada,16050201,465815,D:\et-demands\examples\gridmet\climate\gridmet_historical_465815.csv
+49,39.0666666667,-119.76666663299999,465816,1434.8000488,4707.350097699999,32005,NV,Douglas,County,Nevada,16050201,465816,D:\et-demands\examples\gridmet\climate\gridmet_historical_465816.csv
+50,39.0666666667,-119.474999967,465823,2267.5600586,7439.5,32005,NV,Douglas,County,Nevada,16050202,465823,D:\et-demands\examples\gridmet\climate\gridmet_historical_465823.csv
+51,39.1083333333,-119.849999967,467200,1954.6400145999999,6412.8598633,32005,NV,Douglas,County,Nevada,16050201,467200,D:\et-demands\examples\gridmet\climate\gridmet_historical_467200.csv
+52,39.1083333333,-119.8083333,467201,1694.8800049000001,5560.6298828,32005,NV,Douglas,County,Nevada,16050201,467201,D:\et-demands\examples\gridmet\climate\gridmet_historical_467201.csv
+53,39.1083333333,-119.76666663299999,467202,1492.4399414000002,4896.4599609,32005,NV,Douglas,County,Nevada,16050201,467202,D:\et-demands\examples\gridmet\climate\gridmet_historical_467202.csv
+54,39.1083333333,-119.724999967,467203,1475.8000488,4841.8598633,32510,NV,Carson City,City,Nevada,16050201,467203,D:\et-demands\examples\gridmet\climate\gridmet_historical_467203.csv
+55,39.1083333333,-119.6833333,467204,1608.6800537000001,5277.8198242,32510,NV,Carson City,City,Nevada,16050201,467204,D:\et-demands\examples\gridmet\climate\gridmet_historical_467204.csv
+56,39.15,-119.89166663299999,468585,2433.5600586,7984.120117199999,32510,NV,Carson City,City,Nevada,16050101,468585,D:\et-demands\examples\gridmet\climate\gridmet_historical_468585.csv
+57,39.15,-119.849999967,468586,2415.8000488000002,7925.850097699999,32510,NV,Carson City,City,Nevada,16050201,468586,D:\et-demands\examples\gridmet\climate\gridmet_historical_468586.csv
+58,39.15,-119.8083333,468587,1821.7199707000002,5976.7700195,32510,NV,Carson City,City,Nevada,16050201,468587,D:\et-demands\examples\gridmet\climate\gridmet_historical_468587.csv
+59,39.15,-119.76666663299999,468588,1501.5200195,4926.25,32510,NV,Carson City,City,Nevada,16050201,468588,D:\et-demands\examples\gridmet\climate\gridmet_historical_468588.csv
+60,39.15,-119.724999967,468589,1455.7199707,4775.9799805,32510,NV,Carson City,City,Nevada,16050201,468589,D:\et-demands\examples\gridmet\climate\gridmet_historical_468589.csv
+61,39.1916666667,-119.849999967,469972,2304.9599609,7562.2099609,32031,NV,Washoe,County,Nevada,16050201,469972,D:\et-demands\examples\gridmet\climate\gridmet_historical_469972.csv
+62,39.1916666667,-119.8083333,469973,1743.5600585999998,5720.3398438,32510,NV,Carson City,City,Nevada,16050201,469973,D:\et-demands\examples\gridmet\climate\gridmet_historical_469973.csv
+63,39.1916666667,-119.76666663299999,469974,1484.4000244000001,4870.080078100001,32510,NV,Carson City,City,Nevada,16050201,469974,D:\et-demands\examples\gridmet\climate\gridmet_historical_469974.csv
+64,39.1916666667,-119.724999967,469975,1450.4399414000002,4758.6601563,32510,NV,Carson City,City,Nevada,16050201,469975,D:\et-demands\examples\gridmet\climate\gridmet_historical_469975.csv
+65,39.1916666667,-119.6833333,469976,1472.0799561,4829.6601563,32510,NV,Carson City,City,Nevada,16050201,469976,D:\et-demands\examples\gridmet\climate\gridmet_historical_469976.csv
+66,39.2333333333,-119.8083333,471359,1587.6400145999999,5208.7900391,32031,NV,Washoe,County,Nevada,16050102,471359,D:\et-demands\examples\gridmet\climate\gridmet_historical_471359.csv
+67,39.2333333333,-119.76666663299999,471360,1610.8399658,5284.9101563,32031,NV,Washoe,County,Nevada,16050102,471360,D:\et-demands\examples\gridmet\climate\gridmet_historical_471360.csv
+68,39.2333333333,-119.724999967,471361,1777.5999755999997,5832.0200195,32510,NV,Carson City,City,Nevada,16050201,471361,D:\et-demands\examples\gridmet\climate\gridmet_historical_471361.csv
+69,39.2333333333,-119.6833333,471362,1734.8800049000001,5691.8598633,32019,NV,Lyon,County,Nevada,16050202,471362,D:\et-demands\examples\gridmet\climate\gridmet_historical_471362.csv
