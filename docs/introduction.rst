@@ -19,7 +19,7 @@ Acknowledgements
 ----------------
 The basis for the ET Demands model is the dual crop coefficient method
 presented in FAO-56 `(Allen et al., 1998) <https://www.kimberly.uidaho.edu/water/fao56/fao56.pdf>`_.
-Original model code was developed by Dr. Rick Alan at the University of Idaho
+Original model code was developed by Dr. Richard Allen at the University of Idaho
 Kimberly Reserarch and Extension Center in Kimberly, ID.
 
 Model History
