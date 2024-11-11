@@ -12,11 +12,36 @@ RefET
 
 Thornton and Running Coefficients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+THIS SECTION IS CURRENTLY UNDER DEVELOPMET. 
+
+Thorton and Running coefficients are set one of three ways within the RefET Module.
+ 1) Station Metadata File: tr_b0, tr_b1, tr_b2 columns
+ 2) ret .ini file [INMET] section: TR_b0, TR_B1, and TR_b2 varibles
+ 3) Defualt values coded within RefET python scripts
+ 
+These are current hard-coded defaults if not found by other options. Should they be set to original 'universal' TR values?
+# These match the WWCRA Klamath Values. 
+# Thorton and Running Solar Radiation Estimation Coefficients
+try: self.input_met['TR_b0'] = config.getfloat(input_met_sec, 'TR_b0')
+  except: self.input_met['TR_b0'] = 0.0307075712855
+try: self.input_met['TR_b1'] = config.getfloat(input_met_sec, 'TR_b1')
+  except: self.input_met['TR_b1'] = 0.1960418743712
+try: self.input_met['TR_b2'] = config.getfloat(input_met_sec, 'TR_b2')
+  except: self.input_met['TR_b2'] = -0.2454592897026
+
+Default Thornton and Running calibration coefficients are utlized if not specified by the user. 
+
+Thornton and Running coefficients can be optimized to specific station data using Monte Carlo uniform random search techniques.
+Allen (2009; http://www.kimberly.uidaho.edu/ETIdaho/ETIdaho_Report_April_2007_with_supplement.pdf) and Huntington (2010; http://water.nv.gov/mapping/et/Docs/Evapotranspiration_and_Net_Irrigation_Requirements_for_Nevada_Compiled.pdf) applied these technique to optimize coefficients during consumptive use studies in Idaho and Nevada.
+More recently, https://www.usbr.gov/watersmart/baseline/docs/irrigationdemand/irrigationdemands.pdf (see report pages; 36-37).
+
+Additional infromation on Thornton and Running calibration will be added during future releases. 
+
 
 .. _model-calibration-cropet:
 
 CropET
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------
 ETDemands utlizes crop specific parameters to determine crop growth and timing including growing season start and end dates, crop development rates, effective full cover, harvest timings, and killing frosts. Initial values for each of the control parameters are provided, however, users should customize these values for their input meterological data source and study area. Inherent bias in temperature data can lead to incorrect timing of the season start, effective full cover, and termination dates. A detailed decsiption of the various crop parameters can be found here: http://data.kimberly.uidaho.edu/ETIdaho/ETIdaho_Report_April_2007_with_supplement.pdf
 
 The initial control parameters are located in the CropParams.txt file contained in the static folder. Note: Users should NOT modify the statics files found in the etemands model folder. Running the initial prep steps will build project specific static files that can be changed accordingly. ETDemands can be run with either spatially consistent or spatially varying calibration parameters. This mode is set in the model INI file via the spatial_cal_flag and spatial_cal_folder inputs.
@@ -43,6 +68,70 @@ Calibrating the ETDemands model is an iterative process that requires users to p
 
   crop_test_list = 07
   cell_test_list = 529813
+  
+  
+An understanding of the growing practices of the area is required for proper calibration, specifically typical planting (or greenup) dates and harvest (senescence) dates are needed. Data specific to the area is best, but general start and stop dates are also available from the U.S. Department of Agriculture (USDA). The most recent nation-wide
+publication is entitled Field Crops: Usual Planting and harvesting Dates, October 2010 and is (as of this
+writing) available at: (https://www.nass.usda.gov/Publications/Todays_Reports/reports/fcdate10.pdf).
+Once start and stop dates are secured for the area of interest, follow this iterative process:
+
+1) Calibrate one crop at a time. A single crop can be specified by setting a crop_test_list parameter in the
+model .ini file. 
+
+2) For a single crop, execute the crop ET model for a single ET Cell using the cell_test_list .ini paramter.
+Choose a representative single ET Cell that will act as the calibration cell.
+
+3) Execute the model run and review daily output. Growing season postprocessing script can be run to generate
+summary data showing the start and stop dates for each year of execution, the second showing the average start
+and stop date for the entire run. Open the annual average file, titled “growing_season_mean_annual.csv” and
+look at the “MEAN_START_DATE” and “MEAN_END_DATE” fields. 
+
+
+T4) Adjust the parameters for start and stop in the "CropParam.txt" or crop paramater .shp as needed.
+
+  a) Row 21 specifies the method used to estimate planting/greenup: 1=Growing Degree Days
+  (GDD), 2= 30-day average temperature (T30), 3=User specified date, 4=Always on
+
+  b) Row 22 specifies the number of GDD or the T30 temperature. If the type displayed in row
+  21 is 3, enter the start month in row 23. If the MEAN_START_DATE (from step 3 above) is
+  too early, increase the value in row 22.
+
+  c) Row 26 specifies the GDD required for termination. Note that this is the number of GDD
+  after planting/greenup. If the MEAN_END_DATE (from step 3 above) is too early, increase
+  the value in row 26.
+
+1) Additionally, if the user specifies, an absolute maximum growing season length can be
+entered in row 29.
+
+2) For crops that grow until a killing frost, row 30 is used. Enter the temperature required
+to end the crop growing season.
+
+Once the start and stop dates are achieved, it is time to adjust the crop kc curve to match example
+curves. This calibrates the planting/greenup to Effective Full Cover (EFC)/maturity portion of the curve.
+Once again, this is an iterative process that relies on the judgement of the user to accomplish. Example
+curves are available online or can be secured from the Reclamation report titled West-Wide Climate
+Risk Assessment: Irrigation Demand and Reservoir Evaporation Projections. Example Kc curves can be found here:
+http://data.kimberly.uidaho.edu/ETIdaho/ETIdaho_Report_April_2007_with_supplement.pdf
+Comparing the resulting kc curves to the display curves allows the user to change maturity times for the
+crops, thus dialing in the calibration. Steps for doing this are below:
+
+5) Compare the resulting kc curve to a known curve for the crop of interest. Look specifically at the
+time from planting/greenup to full maturity (the top of the curve) relative to the overall length
+of the life cycle.
+
+6) Adjust the values in row 25 (for GDD and T30 based crops or row 28 (for date based crops) of
+the “CropParams” tab of the Meta data workbook to adjust the curve peak to better match the
+example crop curves.
+
+Once a curve for the crop looks good (on average, no two years growing conditions will be exactly the
+same), choose a different crop on the “ETCellsCrops” tab and repeat for all crops to be simulated.
+After each adjustment of the “CropParams” data, re-run crop ET model to get updated simulation
+results. Unless meteorology is changed, the Reference ET model does not need to be re-run between
+calibration steps. Typically, start and stop dates are calibrated first (steps 2-4 above), re-executing the
+ET model between each adjustment of the “CropParams” data. Once the start and stop times are
+calibrated, move on to the crop curve calibration, executing steps 2, 5 and 6, again re-running the ET
+model between each parameter adjustment.
+  
 
 
 Interpolation of Spatial Crop Parameters

@@ -2,7 +2,18 @@ Introduction
 ============
 The ET-Demands model develops daily estimates of crop irrigation water requirements
 using daily weather data (including reference evapotranspiration) along with
-crop-specific crop growth curves.  
+crop-specific crop growth curves. Accurate estimates of evapotranspiration (ET) are becoming more important as
+increasing demands are placed on finite water supplies across the western
+U.S. Local, state, and federal water resource agencies require accurate crop ET (ETact)
+and net irrigation water requirement (NIWR) estimates for evaluating irrigation
+development, transfers of irrigation water for municipal use, and litigation of water right
+applications and protests. The ETact is calculated via a crop coefficient approach,
+where ETact is equal to the reference ET multiplied by a crop coefficient. The NIWR is
+equal to the annual ETact less the effective precipitation entering the root zone that is
+available for evaporation or transpiration. The methods for estimating the
+reference ET follow the ASCE-EWRI Standardized Penman-Monteith (ASCE-PM)
+approach, while the ETact and NIWR are estimated using a dual crop coefficient and
+daily soil water balance.
 
 Acknowledgements
 ----------------

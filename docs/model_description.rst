@@ -4,7 +4,7 @@
 Model Description
 =================
 
-The ET-Demands package
+The ETDemands model consists of three modules that develop daily estimates of crop irrigation water requirements using daily weather data (including reference evapotranspiration) and crop-specific crop growth curves. The three modules that make up the ETDemands model are RefET, CropET, and AreaET. Currently, only the CropET module, prep tools, and the post-processing tools are fully functional for ETDemands.
 
 .. _model-description-refet:
 
@@ -44,9 +44,9 @@ Daily Reference Evapotranspiration
 """"""""""""""""""""""""""""""""""
 
 .. math::
-
-   ET_{sz} =\frac{0.408 \Delta (R_n-G) + \gamma \frac{C_n}{T_{mean} + 273}u_2
-      (e_s-e_a)}{\Delta + \gamma(1+C_d u_2)}
+    
+    ET_{sz} =\frac{0.408 \Delta (R_n-G) + \gamma \frac{C_n}{T_{mean} + 273}u_2
+      (e_s-e_a)}{\Delta + \gamma(1+C_d u_2)} 
 
 where:
 
@@ -909,20 +909,17 @@ Hargreaves-Samani
 Priestley-Taylor
 """"""""""""""""
 
-`(Priestley and Taylor, 1972) <https://doi.org/10.1175/1520-0493(1972)100//<0081:OTAOSH//>2.3.CO;2>`_ .
+`(Priestley and Taylor, 1972) <https://journals.ametsoc.org/mwr/article/100/2/81/60530>`_ .
 
 Blaney-Criddle
 """"""""""""""
-[THIS CURRENTLY ISN'T SUPPORTED]
+[CURRENTLY NOT SUPPORTED]
 
 `(Blaney and Criddle, 1950) <https://archive.org/details/determiningwater96blan>`_.
 
 .. _model-description-cropet:
 
 .. _model-description-cropet:
-
-CropETPrep
-----------
 
 CropET
 ------
@@ -998,20 +995,13 @@ aridity effect.
 | October     | 0.3           | 1.6           | 0.9           | 0.0         |
 +-------------+---------------+---------------+---------------+-------------+
 
-HOW WAS THE ARIDITY EFFECT DETERMINED. ARE THESE DATA GENERAL ENOUGH TO USE
-AT OTHER LOCATIONS IF AN ARIDITY RATING IS DEVELOPED? IF NOT, CAN WE GENERALIZE
-THE APPROACH TO DEVELOPING AN ARIDITY RATING, AND ASSOCIATED ARIDITY EFFECT ADJUSTMENTS?
-ALSO, THE 'CropET' MODULE HAS A WAY OF PULLING IN ARIDITY EFFECT VALUES, HOWEVER,
-THE 'RefET' MODULE DOES NOT. THIS MEANS THAT WHILE TEMPERATURES USED IN THE
-CropET MODULE ARE ADJUSTED, TEMPERATURES USED TO CALCUATE REFERENCE ET ARE NOT.
-IF WE WANT TO CONTINUE TO SUPPORT THE ARIDITY RATING, THIS SHOULD BE ADDRESSED.
-WOULD ALSO REQUIRE PASSING THE MODEL THE ARIDITY EFFECT ADJUSTMENT FACTORS.
 
 AreaET
 ------
+The AreaET module is currently under development.
 
-PostProcessing
---------------
+The AreaET module converts crop evapotranspiration and net irrigation water requirement rates estimates output by the 
+CropET module to volume and flow estaimtes based on user supplied acreage information. Aggregations of daily, monthly, annual, and growing seaon volumes and flows are output along with crop percentages and ratios for each study cell. Users can define start and end dates to analyze specific time periods.
 
 References
 -----------

@@ -80,7 +80,7 @@ For this example the CDL raster will be downloaded directly to the project GIS f
 
     > python ..\..\et-demands\prep\download_cdl_raster.py --ini huc_example_prep.ini -o
 
-If the download script doesn't work, please try downloading the `2015_30m_cdls.zip <ftp://ftp.nass.usda.gov/download/res/2015_30m_cdls.zip>`_ file directly from your browser or using a dedicated FTP program.
+If the download script doesn't work, please try downloading the `2015_30m_cdls.zip <ftp://ftp.nass.usda.gov/download/res/2010_30m_cdls.zip>`_ file directly from your browser or using a dedicated FTP program.
 
 Clip the CDL raster to the cell shapefile extent::
 

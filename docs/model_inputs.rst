@@ -27,17 +27,17 @@ Timeseries Data
 Daily Variables
 ~~~~~~~~~~~~~~~
 
-* Date [in *YYYY-MM-DD* format]
-* T\ :sub:`max` = maximum daily air temperature
-* T\ :sub:`min` = minimum daily air temperature
-* T\ :sub:`d` = mean daily dew point temperature\ :sup:`a`
-* e\ :sub:`a` = actual vapor pressure\ :sup:`a`
-* u\ :sub:`x` = mean daily wind speed at known height\ :sup:`b`
-* R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
-* P\ :sub:`r` = daily precipitation (optional)
-* Q = specific humidity (optional)
-* S\ :sub:`n` = daily accumulated snow (optional)
-* S\ :sub:`d` = snow depth (optional)
+- Date [in *YYYY-MM-DD* format]
+- T\ :sub:`max` = maximum daily air temperature
+- T\ :sub:`min` = minimum daily air temperature
+- T\ :sub:`d` = mean daily dew point temperature\ :sup:`a`
+- e\ :sub:`a` = actual vapor pressure\ :sup:`a`
+- u\ :sub:`x` = mean daily wind speed at known height\ :sup:`b`
+- R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
+- P\ :sub:`r` = daily precipitation (optional)
+- Q = specific humidity (optional)
+- S\ :sub:`n` = daily accumulated snow (optional)
+- S\ :sub:`d` = snow depth (optional)
 
 \ :sup:`a` One of these is required. If both T\ :sub:`d` and e\ :sub:`a` are not provided, mean monthly dew point depression, K\ :sub:`0`, must be provided.
 
@@ -50,15 +50,15 @@ coefficients must be provided in the *ini* file.
 Hourly Variables
 ~~~~~~~~~~~~~~~~~
 
-* Date [in *YYYY-MM-DD HH:MM* format]
-* T\ :sub:`mean` = mean hourly air temperature
-* T\ :sub:`d` = mean hourly dew point temperature\ :sup:`a`
-* u\ :sub:`x` = mean hourly wind speed at known height\ :sup:`b`
-* R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
-* P\ :sub:`r` = hourly precipitation (optional)
-* Q = specific humidity (optional)
-* S\ :sub:`n` = hourly accumulated snow (optional)
-* S\ :sub:`d` = snow depth (optional)
+- Date [in *YYYY-MM-DD HH:MM* format]
+- T\ :sub:`mean` = mean hourly air temperature
+- T\ :sub:`d` = mean hourly dew point temperature\ :sup:`a`
+- u\ :sub:`x` = mean hourly wind speed at known height\ :sup:`b`
+- R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
+- P\ :sub:`r` = hourly precipitation (optional)
+- Q = specific humidity (optional)
+- S\ :sub:`n` = hourly accumulated snow (optional)
+- S\ :sub:`d` = snow depth (optional)
 
 \ :sup:`a` One of these is required. If both T\ :sub:`d` and e\ :sub:`a` are not provided, mean monthly dew point depression, K\ :sub:`0`, must be provided.
 
@@ -82,11 +82,9 @@ RefET requires the timeseries weather data to be in delimited columns with heade
 | Tab       | /t             |
 +-----------+----------------+
 
-* Format: **.csv**, **.txt**, **.dat**
-
-* File Name: (DESCRIBE WILDCARDS)
-
-* Structure:
+- Format: **.csv**, **.txt**, **.dat**
+- File Name: (DESCRIBE WILDCARDS)
+- Structure:
 
 +--------------+---------------+---------------+-------------+-------------+-------------+
 | Date         | Tmax          | Tmin          | ux          | Rn          | Tdew        |
@@ -98,7 +96,7 @@ RefET requires the timeseries weather data to be in delimited columns with heade
 | ...          | ...           | ...           | ...         | ...         | ...         |
 +--------------+---------------+---------------+-------------+-------------+-------------+
 
-* Units
+- Units
 
 +-----------------+----------------+----------------------------------------+--------------------------------------------------------------------------+
 | Class           | Variables      | Units                                  | Model Notation                                                           |
@@ -143,23 +141,23 @@ RefET requires the timeseries weather data to be in delimited columns with heade
 
 Mean Monthly Data
 """""""""""""""""
+
 Mean monthly data are used to calculate a dew point temperature timeseries or gap fill the timeseries data if needed.
 
-* T\ :sub:`max` = mean monthly maximum daily air temperature
-* T\ :sub:`min` = mean monthly minimum daily air temperature
-* u\ :sub:`x` = mean monthly wind speed at known height
-* K\ :sub:`0` =  mean monthly dew point depression
+- T\ :sub:`max` = mean monthly maximum daily air temperature
+- T\ :sub:`min` = mean monthly minimum daily air temperature
+- u\ :sub:`x` = mean monthly wind speed at known height
+- K\ :sub:`0` =  mean monthly dew point depression
 
 File Format
 ~~~~~~~~~~~
 
-* Delimiter:
+- Delimiter:
 
 See *Timeseries Data - Delimiter*
 
-* Format: **.csv**, **.txt**, **.dat**
-
-* Structure:
+- Format: **.csv**, **.txt**, **.dat**
+- Structure:
 
 +-------------+---------------+-----+-----+-----+------+------+------+------+------+------+------+-----+-----+
 | Met Node ID | Met Node Name | Jan | Feb | Mar | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov | Dec |
@@ -169,7 +167,7 @@ See *Timeseries Data - Delimiter*
 
 *T\ :sub:`max`* example shown. File structure will be the same for T\ :sub:`min`, u\ :sub:`x`, and K\ :sub:`0`. Individual files are provided for each variable.
 
-* Units
+- Units
 
 See *Timeseries Data - Units*
 
@@ -199,29 +197,29 @@ Weather Data
 
 Timeseries Data
 """""""""""""""
+
 The user must provide daily weather and reference ET data for each ET zone. This includes:
 
-* Date [in *YYYY-MM-DD* format]
-* T\ :sub:`max` = maximum daily air temperature
-* T\ :sub:`min` = minimum daily air temperature
-* T\ :sub:`d` = mean daily dew point temperature\ :sup:`a`
-* u\ :sub:`x` = mean daily or hourly wind speed at known height\ :sup:`b`
-* R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
-* Q = specific humidity (optional)
-* S\ :sub:`n` = daily accumulated snow (optional)
-* S\ :sub:`d` = snow depth (optional)
+- Date [in *YYYY-MM-DD* format]
+- T\ :sub:`max` = maximum daily air temperature
+- T\ :sub:`min` = minimum daily air temperature
+- T\ :sub:`d` = mean daily dew point temperature\ :sup:`a`
+- u\ :sub:`x` = mean daily or hourly wind speed at known height\ :sup:`b`
+- R\ :sub:`n` = calculated net radiation at the crop surface\ :sup:`c`
+- Q = specific humidity (optional)
+- S\ :sub:`n` = daily accumulated snow (optional)
+- S\ :sub:`d` = snow depth (optional)
 
 and one of two reference ET values:
 
-* ASCEr - Daily reference ET from Penman–Monteith
-* ASCEg - Daily reference ET from Penman–Monteith
+- ASCEr - Daily reference ET from Penman–Monteith
+- ASCEg - Daily reference ET from Penman–Monteith
 
 File Format
 ~~~~~~~~~~~
 
-* Format: **.csv**
-
-* Structure:
+- Format: **.csv**
+- Structure:
 
 +--------+--------+--------+----------+----------+------+---------+--------+--------+------------------------+
 | Date   | TMax   | TMin   | Precip   | Snow     | SDep | EstRs   | EsWind | EsTDew | *ETRef* [ASCEr; ASCEg] |
@@ -235,164 +233,211 @@ Location Shapefile
 
 A shapefile containing the locations of each weather station is also required and is used to generate the static input files. The shapefile must contain the following attributes:
 
-* STATION_ID - Weather station ID
-* *ETZONE_ID* - Zone ID. This can include HUC8, HUC10, COUNTRYNAME, OR GRIDMET_ID
-* LAT - Weather station latitude
-* LON - Weather station longitude
-* [*optional*] *ELEV* [ELEV_FT; ELEV_M] - Weather station elevation in feet or meters. This field is optional and only required if running the RefET model to estimate reference ET.
+- STATION_ID - Weather station ID
+- LAT - Weather station latitude
+- LON - Weather station longitude
+- [*optional*] *ELEV* [ELEV_FT; ELEV_M] - Weather station elevation in feet or meters. This field is optional and only required if running the RefET model to estimate reference ET.
 
 File Format
 ~~~~~~~~~~~
 
-* Format: **.shp**
+- Format: **.shp**
+- Attribute Table Structure:
 
-* Attribute Table Structure:
-
-+--------------+----------------------------------------------------+-------+-------+----------------------------+
-| STATION_ID   | *ZONE_ID* [HUC8; HUC10; COUNTRYNAME; GRIDMET_ID]   | LAT   | LON   | *ELEV* [ELEV_FT; ELEV_M]   |
-+--------------+----------------------------------------------------+-------+-------+----------------------------+
++--------------+-------+-------+----------------------------+
+| STATION_ID   | LAT   | LON   | *ELEV* [ELEV_FT; ELEV_M]   |
++--------------+-------+-------+----------------------------+
 
 
 Study Area
 ^^^^^^^^^^
-The user must provide a study area polygon shapefile with at least one feature.  Each feature in the study area shapefile will become a separate ET cell/unit.  Currently, only HUC8, HUC10, county, and gridmet cell shapefiles are fully supported by the prep tools.
+The user must provide a study area polygon shapefile with at least one feature.  Each feature in the study area shapefile will become a separate ET cell/unit.  Study area .shp must have 'CELL_ID', 'CELL_NAME', and 'STATION_ID' fields. 
 
 
 Soils Data
 ^^^^^^^^^^
+
 Shapefiles containing features (polygons) attributed with AWC and hydrologic soils group information are required for running zonal statistics on the  soil properties for each of the ETZones in the cell shapefile. The following attributes are required/used in the examples:
 
 Available Water Capacity  Shapefile (AWC_WTA_0to152cm_statsgo.shp is the example)
 
-* AWC = available water capacity (in/in)
+- AWC = available water capacity (in/in)
 
 Percent Clay  Shapefile (Clay_WTA_0to152cm_statsgo.shp is the example)
 	
-* Clay = percent clay (decimal)
+- Clay = percent clay (decimal)
 
 Percent Sand Shapefile (Sand_WTA_0to152cm_statsgo.shp is the example)
 
-* Sand = percent sand (decimal)
+- Sand = percent sand (decimal)
 
 **File Formats**
 
-* Format: **.shp**
-* Attribute Table Structure (examples’ file structures shown):
+- Format: **.shp**
+- Attribute Table Structure (examples’ file structures shown):
 
-  AREA SYMBOL, SPATIALVER, MUSYM, MUKEY, MUKEY_1, AWC (or Clay or Sand depending on which shapefile)
-
++--------------+--------------+---------+--------+----------+-----------------------+
+| AREA SYMBOL  | SPATIALVER   | MUSYM   | MUKEY  | MUKEY_1  |  AWC (or Clay or Sand)|
++--------------+--------------+---------+--------+----------+-----------------------+
 
 Crop Type Data
 ^^^^^^^^^^^^^^
+
 Shapefiles containing features (polygons) attributed with a CDL code are required  for ETDemands. The features should only include agricultural areas within the ETZones; the example CDL shapefile has removed all non-agricultural areas within the respective ETZones. The shapefile should have the following field:
 
-* CDL (Int)
+- CDL (Int)
 
 **File Formats**
 
-* Format: **.shp**
-* Attribute Table Structure:
-	
- CDL
+- Format: **.shp**
+- Attribute Table Structure:
 
++-------+  
+|  CDL  |
++-------+
 
 Static Inputs
 ^^^^^^^^^^^^^
+
 These files will be generated automatically by the CropETPrep module
 
 
 
 CropCoefs
 """""""""
-Crop coefficient curves for each crop. Generally, these values should not be modified. The crop coefficients are used in ETDemands to reflect changes of vegetation phenology of a particular crop or vegetation type over the growing season. The crop coefficient curves (60 count) represent changes in vegetation phenology, which can vary from year to year depending on the start, duration, and termination of the growing season, all of which are dependent on air temperature conditions during spring, summer, and fall. Three methods were used to define the shape and duration of the crop coefficient curves to allow curves to be scaled differently each year according to weather conditions based on relative time scales or thermal units. These methods are:  
 
-* Normalized cumulative growing degree-days from planting to effective full cover, with this ratio extended until termination (1=NCGDD)
-* Percent time from planting to effective full cover, with this ratio extended until termination (4=%PL-Term)
-* Percent time from planting to effective full cover and then number of days after full cover to termination (3=%PL-EC+daysafter)
+Crop coefficient curves for each crop. Generally, these values should not be modified. The crop coefficients are used in ETDemands to reflect changes of vegetation phenology of a particular crop or vegetation type over the growing season. The crop coefficient curves (60 count) represent changes in vegetation phenology, which can vary from year to year depending on the start, duration, and termination of the growing season, all of which are dependent on air temperature conditions during spring, summer, and fall. Three methods were used to define the shape and duration of the crop coefficient curves to allow curves to be scaled differently each year according to weather conditions based on relative time scales or thermal units. These methods are:
+
+- Normalized cumulative growing degree-days from planting to effective full cover, with this ratio extended until termination (1=NCGDD)
+
+- Percent time from planting to effective full cover, with this ratio extended until termination (4=%PL-Term)
+
+- Percent time from planting to effective full cover and then number of days after full cover to termination (3=%PL-EC+daysafter)
 
 **File Format:**
 
-* Format: **.txt**
-* Structure: 
+- Format: **.txt**
+- Structure: 
 
-Curve no.: 1-60
-Curve type: ‘1=NCGDD: 2=%PL-EC: 3=%PL-EC+daysafter: 4=%PL-Term
-Percent PL-EC or PL-TM (type 1-2-4) and/or Percent PL-EC+ days after (type 3)
+     + Curve no.: 1-60
+     
+     + Curve type: ‘1=NCGDD: 2=%PL-EC: 3=%PL-EC+daysafter: 4=%PL-Term
+     
+     + Percent PL-EC or PL-TM (type 1-2-4) and/or Percent PL-EC+ days after (type 3)
 
-GDD Base C
-GDD Type
-CGDD Planting to FC
-CGDD Planting to Terminate
-CGDD Planting to Terminate-alt
-Comment:
-Comment 2:
+     + GDD Base C
+     
+     + GDD Type
+     
+     + CGDD Planting to FC
+     
+     + CGDD Planting to Terminate
+     
+     + CGDD Planting to Terminate-alt
+     
+     + Comment:
+     
+     + Comment 2:
 
 
 CropParams
 """"""""""
+
 Crop parameters that can/should be modified during calibration.
 
-* Format: **.txt**
+- Format: **.txt**
+- Structure:
 
-* Structure:
-Crop number and flag for crop type: negative is annual; positive in perennial
-Irrigation flag: 1-yes, 2-reg., 3-required
-Days after planting/green up for earliest irrigation: days
-Fw: assume sprinkler
-Winter surface cover class: 1-bare, 2-mulch, 3-sod
-Kc max: max of value or Kcb+0.05
-MAD during initial and development stage: percent
-MAD during midseason and lateseason: percent
-Initial rooting depth, m: On alfalfa, 2nd cycle, start at max
-Maximum rooting depth, m: mrd
-End of root growth, as a fraction of time from pl to EFC (or term if type 4)
-Starting crop height, m: sch
-Maximum crop height, m: mch
-Crop curve number: ccn
-Crop curve name: ccn
-Crop curve type: 1=NCGDD, 2=%PL-EC, 3=%PL-EC,daysafter, 4=%PL-Term
-Flag for means to estimate pl or gu: 1=CGDD, 2=T30, 3=date, 4 is on all the time
-T30 for pl or gu or CGDD for pl or gu
-Date of pl or gu (can be blank): A negative value is an offset to the prior row, pos is months (fraction)
-For nCGDD based curves: Tbase: Temp Min. C (neg. For spec.)
-	CGDD for EFC: cgdd efc
-	CGDD for termination: cgdd term
+     + Crop number and flag for crop type: negative is annual; positive in perennial
+     
+	   + Irrigation flag: 1-yes, 2-reg., 3-required
+	   + Days after planting/green up for earliest irrigation: days
+	    
+     + Fw: assume sprinkler
+     
+     + Winter surface cover class: 1-bare, 2-mulch, 3-sod
+     
+     + K\ :sub:`c`\ max: max of value or K\ :sub:`cb`\ + 0.05
+     
+     + MAD during initial and development stage: percent
+     
+     + MAD during midseason and lateseason: percent
+     
+     + Initial rooting depth, m: On alfalfa, 2nd cycle, start at max
+     
+     + Maximum rooting depth, m: mrd
+     
+     + End of root growth, as a fraction of time from pl to EFC (or term if type 4)
+     
+     + Starting crop height, m: sch
+     
+     + Maximum crop height, m: mch
+     
+     + Crop curve number: ccn
+     
+     + Crop curve name: ccn
+     
+     + Crop curve type: 1=NCGDD, 2=%PL-EC, 3=%PL-EC,daysafter, 4=%PL-Term
+     
+     + Flag for means to estimate pl or gu: 1=CGDD, 2=T30, 3=date, 4 is on all the time
+     
+     + T30 for pl or gu or CGDD for pl or gu
+     
+     + Date of pl or gu (can be blank): A negative value is an offset to the prior row, pos is months (fraction)
+     
+     + For nCGDD based curves: Tbase: Temp Min. C (neg. For spec.)
+     
+          + CGDD for EFC: cgdd efc
+	  
+ 	  + CGDD for termination: cgdd term
 	
-For time based curves:
-	Time for EFC: days after pl or gu
-	Time for harvest (neg to extend until frost): Use as max length for CGDD crops
-Killing frost temperature: C
-Invoke Stress: 1-yes, 0-no, 2-yes and will wake up after severe stress (Ks<0.05)
-Curve number:
-	Coarse soil
-	Medium soil
-	Fine soil
+     + For time based curves:
+     
+     	  +  Time for EFC: days after pl or gu
+	  
+	  +  Time for harvest (neg to extend until frost): Use as max length for CGDD crops
+	    
+     + Killing frost temperature: C
+     
+     + Invoke Stress: 1-yes, 0-no, 2-yes and will wake up after severe stress (K\ :sub:`s`\ < 0.05)
+     
+     + Curve number:
+	   + Coarse soil
+	   + Medium soil
+	   + Fine soil
 
 
 ETCellsCrops
 """"""""""""
+
 Flags controlling which crops to simulate.  If using the prep workflow, the flags will initially be set based on the CDL acreage.
 
-* Format: **.txt**
-* Structure:
-Number of Crops: XX,	Crop Number (CDL): XX...
-ET Cell ID/ET Index,	ET Cell Name,	Ref ET ID/Met Node Id,	ET Cell Irrigation (0 is off; 1 is on)
+- Format: **.txt**
+- Structure:
+     
+     + Number of Crops: XX,	Crop Number (CDL): XX...
+     + ET Cell ID/ET Index,	ET Cell Name,	Ref ET ID/Met Node Id,	ET Cell Irrigation (0 is off; 1 is on)
+
+
 
 
 EToRatiosMon
 """"""""""""
+
 Reference ET scale factors by month for each ET cell.  This file could be used to account for a seasonal bias in the input weather data.  This file is optional.
 
-* Format: **.txt**
-* Structure:
-Met Node ID, Met Node, Month….
+- Format: **.txt**
+- Structure:
+
+     + Met Node ID, Met Node, Month….
 
 ETCellsProperties
 """""""""""""""""
+
 Soil properties and weather station data for each ET cell.  This file links the stations and the ET cells.
 
-* Format: **.txt**
-* Structure:
+- Format: **.txt**
+- Structure:
 
 +--------------+--------------+-----------------+----------------+-----------------+--------------------+--------------------------------------------+------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------+----------------+------------------+
 | ET Zone ID   | ET Zone Name | Ref ET MET ID   | Met Latitude   | Met Longitude   | Met Elevation (ft) | Area weighted average Permeability - in/hr |	Area weighted average WHC - in/ft |	Average soil depth - in	Hydrologic Group (A-C) (A='coarse'  B='medium') |	Hydrologic Group  (1-3) (1='coarse' 2='medium') |	Aridity Rating | Ref ET Data Path |
@@ -400,9 +445,10 @@ Soil properties and weather station data for each ET cell.  This file links the 
 
 MeanCuttings
 """"""""""""
+
 Sets the assumed number of alfalfa cuttings.  This is important since the CropET module will use different crop coefficient curves for the first and last cutting.
 
-* Format: **.txt**
+- Format: **.txt**
+- Structure:
 
-* Structure:
-ET Cell ID, ET Cell Name, Lat (DD), Number Dairy, Number Beef
+     + ET Cell ID, ET Cell Name, Lat (DD), Number Dairy, Number Beef

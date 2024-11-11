@@ -19,9 +19,9 @@ years. Passing the "-h" argument to each script will display input argument
 options.
 
 Timeseries Tools
-==============
+------------
 Daily Timeseries (plot_crop_daily_timeseries.py)
----------
+^^^^^^^^^^^^
 This analysis tool creates an .html time series figure from the daily
 ETact/ETbas/ETr, Kc/Kcb, PPT/Irrigation datasets. A figure is generated for
 each ET Zone/Crop combination. Input arguments for start/end date and crop
@@ -45,7 +45,7 @@ input arguments can be specified to customize the output:
         crop_str (str): comma separate list or range of crops to compare
         
 Average Annual Timeseries (plot_crop_daily_groupstats.py)
----------
+^^^^^^^^^^^^
 The groupstats timeseries script averages daily input data from multiple years
 and creates a single average annual timeseries plot of ETact/ETr, Kc,
 and Kcb information for each ET Zone/crop combination. This timeseries plot
@@ -69,9 +69,9 @@ input arguments can be specified to customize the output:
         crop_str (str): comma separate list or range of crops to compare
 
 Shapefile Summary Tools
-==============
+------------
 Summary Shapefiles (summary_shapefiles_gpd.py)
----------
+^^^^^^^^^^^^
 This analysis tool converts the daily output .csv files into crop specific
 summary shapefiles for viewing and analysis of the spatial distribution of
 evaporation. Specific time periods can be specified to process statistics for
@@ -105,7 +105,7 @@ input arguments can be specified to customize the summary output:
 
 
 Cropweighted Summary Shapefile (cropweighted_shapefiles_gpd.py)
----------
+^^^^^^^^^^^^
 This analysis tool converts the daily output .csv files into cropweighted 
 summary shapefiles for viewing and analysis of the spatial distribution of
 evaporation and net irrigation water requirements (NIWR). Specific Time
@@ -140,10 +140,10 @@ specified to customize the output:
 'doy' time_filter 
 
 Miscellaneous Summary Tools
-==============
+------------
 
 Growing Season Summary (compute_growing_season.py)
----------
+^^^^^^^^^^^^
 This script processing the daily output files to summarize growing season
 length and cutting information for each ET Zone/crop combination. Two summary
 .csv files are generated:

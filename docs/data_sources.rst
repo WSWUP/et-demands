@@ -71,11 +71,11 @@ CropET
 Study Area
 ~~~~~~~~~~
 
-HUC8 and HUC10 features can be extracted from the full - [USGS Watershed Boundary Dataset](http://nhd.usgs.gov/wbd.html) (WBD) geodatabase. A subset of the WBD HUC polygons can downloaded using the [USDA Geospatial Data Gateway](https://gdg.sc.egov.usda.gov/) or the full dataset can be downloaded using the [USGS FTP](ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/WBD/).
+HUC8 and HUC10 features can be extracted from the full - `[USGS Watershed Boundary Dataset] <http://nhd.usgs.gov/wbd.html>`_ (WBD) geodatabase. A subset of the WBD HUC polygons can downloaded using the `[USDA Geospatial Data Gateway] <https://gdg.sc.egov.usda.gov>`_ or the full dataset can be downloaded using the [USGS FTP] : ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/WBD 
 
-County features can be downloaded from the [USDA Geospatial Data Gateway](https://gdg.sc.egov.usda.gov/). For the zonal stats prep tool to work, the shapefile must have a field called "COUNTYNAME".  Other county features (such as the [US Census Cartographic Boundary Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html) could eventually be supported (or the name field could be manually changed to COUNTYNAME).
+County features can be downloaded from the `[USDA Geospatial Data Gateway] <https://gdg.sc.egov.usda.gov>`_. For the zonal stats prep tool to work, the shapefile must have a field called "COUNTYNAME".  Other county features (such as the `[US Census Cartographic Boundary Shapefiles] <https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html>`_ could eventually be supported (or the name field could be manually changed to COUNTYNAME).
 
-The GRIDMET grid cells can be constructed how?
+The GRIDMET grid cells can be constructed how? 
 
 
 Crop Type Data
@@ -101,12 +101,12 @@ The average agricultural area available water capacity (AWC) and hydrologic soil
 
 The AWC, percent clay, and percent sand data cannot (currently) be directly downloaded.
 The easiest way to obtain these soils data is to download the
-[STATSGO] (http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_053629)
-database for the target state(s) using the [USDA Geospatial Data Gateway](https://gdg.sc.egov.usda.gov/).
-Shapefiles of the soil properties can be extracted using the [NRCS Soil Data Viewer](http://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/home/?cid=nrcs142p2_053620)
-The [SURGO](http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_053627)
+`[STATSGO] <http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_053629>`_
+database for the target state(s) using the `[USDA Geospatial Data Gateway] <https://gdg.sc.egov.usda.gov/>`_.
+Shapefiles of the soil properties can be extracted using the `[NRCS Soil Data Viewer] <http://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/home/?cid=nrcs142p2_053620>`_
+The `[SSURGO] <http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_053627>`_
 databases can also be used, but these typically cover a smaller area and may have areas of missing data.
- It may also be possible to used the gridded SSRUGO data, but this has not been tested.
+ It may also be possible to used the gridded SSURGO data, but this has not been tested.
 
 *Add additional details about which options were used in the Soil Data Viewer*
 
