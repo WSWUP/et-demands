@@ -18,3 +18,4 @@ dependencies:
   - requests
   - refet>=0.3.10
   - tk
+  - xarray
