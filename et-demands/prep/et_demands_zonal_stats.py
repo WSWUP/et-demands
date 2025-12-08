@@ -525,18 +525,7 @@ def main(ini_path, overwrite_flag=False):
                 except KeyError:
                     continue
                 # clip_poly = zone_poly.intersection(input_poly)
-                
-                #KNFS 12/2025 Found issue? Why was intersection.(crop_poly) used instead of intersection(input_poly)?
-                #Removed issue on 12/8/2025 for KNFS SGW processing Not seeing issue in other ET Demands applications?
-                # CP: When was this added and why? Other ET Demands models (CALSIM, OR were built outside of this script)
-                # Bug does not appear to have impacted other datasets/models.
-                # Updating for 12/2025 KNFS SGW model update with new fields.
-                # try:
-                   # # Fix invalid geometries with zero-distance buffer
-                   # zone_poly = zone_poly.buffer(0) if not zone_poly.is_valid else zone_poly
-                   # crop_poly = crop_poly.buffer(0) if not crop_poly.is_valid else crop_poly
-                   # clip_poly = zone_poly.intersection(crop_poly)
-                    
+
                 try:
                     # Fix invalid geometries with zero-distance buffer
                     zone_poly = zone_poly.buffer(0) if not zone_poly.is_valid else zone_poly
