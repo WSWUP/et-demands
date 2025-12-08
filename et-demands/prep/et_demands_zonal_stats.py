@@ -282,21 +282,65 @@ def main(ini_path, overwrite_flag=False):
     cross_df = pd.read_csv(crosswalk_path)
     cross_dict = dict()
     for index, row in cross_df.iterrows():
-        # cross_dict[int(row.cdl_no)] = list(map(int, str(row.etd_no).split(',')))
-        cross_dict[row.cdl_no] = list(map(int, str(row.etd_no).split(',')))
+        cross_dict[int(row.cdl_no)] = list(map(int, str(row.etd_no).split(',')))
+        # cross_dict[row.cdl_no] = list(map(int, str(row.etd_no).split(',')))
     # logging.debug(crop_num_dict)
+    # Print crosswalk keys and their types
+    # print("\nCrosswalk Keys and Types:")
+    # for k in sorted(cross_dict.keys()):
+    #     print(f'Key: {k}, Type: {type(k)}')
 
     # Build the crop list
     # Because the spatial index is extent based,
     #   this may include crops that don't intersect the zones.
+    # input_crops = sorted(list(set(c['value'] for c in crop_dict.values())))
+    # try:
+    #     etd_crops = sorted(list(set(
+    #         x for c in crop_dict.values() for x in cross_dict[c['value']])))
+    # except KeyError as e:
+    #     logging.error('\nError: Input crop not found in crosswalk file. '
+    #                   'Missing Crop: {}\n Exiting.'.format(e))
+    #     sys.exit()
+    # Build the crop list
+    # input_crops = sorted(list(set(c['value'] for c in crop_dict.values())))
+
+    # # Convert crop values to integers before lookup
+    # try:
+    #     etd_crops = sorted(list(set(
+    #         x for c in crop_dict.values() 
+    #         for x in cross_dict[int(c['value'])])))  # Add int() conversion here
+    # except (KeyError, ValueError) as e:
+    #     logging.error('\nError: Input crop not found in crosswalk file. '
+    #                 'Missing Crop: {}\n Exiting.'.format(e))
+    #     sys.exit()
+
+    # Build the crop list
     input_crops = sorted(list(set(c['value'] for c in crop_dict.values())))
-    try:
-        etd_crops = sorted(list(set(
-            x for c in crop_dict.values() for x in cross_dict[c['value']])))
-    except KeyError as e:
-        logging.error('\nError: Input crop not found in crosswalk file. '
-                      'Missing Crop: {}\n Exiting.'.format(e))
+
+    # Check for ALL missing crops instead of exiting on first error
+    missing_crops = set()
+    valid_crops = []
+
+    for c in crop_dict.values():
+        try:
+            crop_val = int(c['value'])
+            if crop_val in cross_dict:
+                valid_crops.extend(cross_dict[crop_val])
+            else:
+                missing_crops.add(crop_val)
+        except (KeyError, ValueError):
+            missing_crops.add(c['value'])
+
+    if missing_crops:
+        logging.error('\nError: The following input crops are not found in crosswalk file:')
+        for mc in sorted(missing_crops):
+            logging.error('  Missing Crop: {}'.format(mc))
+        logging.error('\nPlease add these crops to your crosswalk file and try again.\n Exiting.')
         sys.exit()
+
+    etd_crops = sorted(list(set(valid_crops)))
+
+
 
     logging.info('\nInput Crops: {}'.format(', '.join(map(str, input_crops))))
     logging.info('Demands Crops: {}'.format(', '.join(map(str, etd_crops))))
@@ -346,9 +390,11 @@ def main(ini_path, overwrite_flag=False):
         for crop_fid in crop_fid_list:
             input_crop_dict = crop_dict[crop_fid]
             crop_value = input_crop_dict['value']
+
             crop_poly = loads(input_crop_dict['wkt'])
 
             clip_poly = zone_poly.intersection(crop_poly)
+
 
             if not clip_poly or clip_poly.is_empty:
                 continue
@@ -363,9 +409,13 @@ def main(ini_path, overwrite_flag=False):
             zone_crop_area += clip_area
             zone_crop_polys.append(clip_poly)
 
-            for etd_crop in cross_dict[crop_value]:
+            # for etd_crop in cross_dict[crop_value]:
+            #     field = 'CROP_{:02d}'.format(etd_crop)
+            #     crop_stats[zone_fid][field] += clip_area
+            for etd_crop in cross_dict[int(crop_value)]:  # Add int() conversion here
                 field = 'CROP_{:02d}'.format(etd_crop)
                 crop_stats[zone_fid][field] += clip_area
+
 
         if soil_crop_mask_flag or save_crop_mask_flag:
             # Combine all polygons/multipolygons into a single multipolygon
@@ -474,7 +524,27 @@ def main(ini_path, overwrite_flag=False):
                     zone_poly = loads(zone_wkt_dict[zone_fid])
                 except KeyError:
                     continue
-                clip_poly = zone_poly.intersection(input_poly)
+                # clip_poly = zone_poly.intersection(input_poly)
+                
+                #KNFS 12/2025 Found issue? Why was intersection.(crop_poly) used instead of intersection(input_poly)?
+                #Removed issue on 12/8/2025 for KNFS SGW processing Not seeing issue in other ET Demands applications?
+                # CP: When was this added and why? Other ET Demands models (CALSIM, OR were built outside of this script)
+                # Bug does not appear to have impacted other datasets/models.
+                # Updating for 12/2025 KNFS SGW model update with new fields.
+                # try:
+                   # # Fix invalid geometries with zero-distance buffer
+                   # zone_poly = zone_poly.buffer(0) if not zone_poly.is_valid else zone_poly
+                   # crop_poly = crop_poly.buffer(0) if not crop_poly.is_valid else crop_poly
+                   # clip_poly = zone_poly.intersection(crop_poly)
+                    
+                try:
+                    # Fix invalid geometries with zero-distance buffer
+                    zone_poly = zone_poly.buffer(0) if not zone_poly.is_valid else zone_poly
+                    input_poly = input_poly.buffer(0) if not input_poly.is_valid else input_poly
+                    clip_poly = zone_poly.intersection(input_poly)
+                except Exception as e:
+                    logging.warning(f'Geometry intersection failed for zone {zone_fid}: {e}')
+                    continue
                 if not clip_poly or clip_poly.is_empty:
                     continue
                 elif not clip_poly.is_valid:
